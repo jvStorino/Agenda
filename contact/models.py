@@ -9,6 +9,10 @@ from django.utils import timezone
 # owner (foreign key)
 
 class Category(models.Model):
+    class Meta:
+        verbose_name_plural = "categories"
+        verbose_name = "Category"
+        
     name = models.CharField(max_length=50)
 
     def __str__(self):
