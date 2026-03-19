@@ -4,7 +4,7 @@ from contact.models import Contact
 
 def index(request):
 
-    contacts = Contact.objects.filter(show=True)
+    contacts = Contact.objects.filter(show=True)[:10]
     context = {
         'contacts': contacts,
     }
