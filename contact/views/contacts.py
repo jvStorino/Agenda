@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from contact.models import Contact
 
-contacts = Contact.objects.all()
+contacts = Contact.objects.filter(show=True)
 context = {
     'contacts': contacts,
 }
