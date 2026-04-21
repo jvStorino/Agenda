@@ -11,10 +11,10 @@ class ContactForm(forms.ModelForm):
         model = Contact
         fields = ['first_name', 'last_name', 'phone', 'email', 'description', 'category']
     
-    def clean(self):
-        # cleaned_data = self.cleaned_data
-        self.add_error(
-            'first_name',
-            ValidationError('Error', code='invalid')
-            )
-        return super().clean()
+    # def clean(self):
+    #     cleaned_data = self.cleaned_data
+    #     self.add_error(
+    #         'first_name',
+    #         ValidationError('Error', code='invalid')
+    #         )
+    #     return super().clean()

@@ -5,7 +5,7 @@
         <h2>Contato</h2>
 
         <form 
-            action="{% url "contact:create_contact" %}"
+            action="{{ form_action }}"
             method="POST"
             enctype="multipart/form-data"
         >

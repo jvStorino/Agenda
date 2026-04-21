@@ -3,13 +3,13 @@
 
     <div class="single-contact">
         <h1 class="single-contact-name">
-            {{ contacts.first_name }} {{ contacts.last_name }}
+            {{ contact.first_name }} {{ contact.last_name }}
         </h1>
-        <p><strong>ID: </strong>{{ contacts.id }}</p>
-        <p><strong>Phone: </strong>{{ contacts.phone }}</p>
-        <p><strong>Email: </strong>{{ contacts.email }}</p>
-        <p><strong>Descrição: </strong>{{ contacts.description|truncatechars:100 }}</p>
-        <p><strong>Categoria: </strong>{{ contacts.category }}</p>
+        <p><strong>ID: </strong>{{ contact.id }}</p>
+        <p><strong>Phone: </strong>{{ contact.phone }}</p>
+        <p><strong>Email: </strong>{{ contact.email }}</p>
+        <p><strong>Descrição: </strong>{{ contact.description|truncatechars:100 }}</p>
+        <p><strong>Categoria: </strong>{{ contact.category }}</p>
     </div>
 
 {% endblock content %}
