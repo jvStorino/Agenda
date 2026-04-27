@@ -10,6 +10,19 @@
         <p><strong>Email: </strong>{{ contact.email }}</p>
         <p><strong>Descrição: </strong>{{ contact.description|truncatechars:100 }}</p>
         <p><strong>Categoria: </strong>{{ contact.category }}</p>
+
+        <div class="contact-links">
+            <a href="{% url "contact:update_contact" contact.id %}" class="btn btn-link">Editar</a>
+            <form action="{% url "contact:delete_contact" contact.id %}" method="POST">
+                {% csrf_token %}
+                {% if confirmation == "no" %}
+                    <input type="hidden", name="confirmation", value="yes">
+                    <button type="submit" class="btn btn-link btn-delete">Confirmar</button>
+                {% else %}    
+                    <button type="submit" class="btn btn-link btn-delete">Excluir</button>
+                {% endif %}
+            </form>
+        </div>
     </div>
 
 {% endblock content %}
